@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>Document</title>
+        <style>
+            body{
+                background: #121212;
+            }
+            .container {
+                height: 200px;
+                position: relative;
+                background-image: url('https://i.pinimg.com/736x/04/11/e0/0411e0bc7e145aea190a6114b1638882.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed; 
+                background-size: cover;
+                
+                
+            }
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+         
+        </style>
+    </head>
+    <body>
+        <div class="container center cyan lighten-5 z-depth-5">
+            <div class="center">
+                <h4 id="question">Date tayo?</h4>
+                <button class="btn green accent-2 pulse" id="yes">Tara</button>
+                <button class="btn pink accent-4" id="hinde">Ayaw</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        const noBtn = document.getElementById('hinde');
+        const yesBtn = document.getElementById('yes');
+        const ques = document.getElementById('question');
+        noBtn.addEventListener("click", ()=>{
+            let rand = Math.floor(Math.random() * (500 - 100) + 1);
+            let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
+            noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+        });
+        yesBtn.addEventListener("click", ()=>{
+            ques.innerHTML = 'DM mo ako ;3'
+            // noBtn.style.display = "none";
+        })
+        
+    </script>
+</html>
