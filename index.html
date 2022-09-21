@@ -42,13 +42,14 @@
         </div>
     </body>
     <script>
+
         const noBtn = document.getElementById('hinde');
         const yesBtn = document.getElementById('yes');
         const ques = document.getElementById('question');
         noBtn.addEventListener("click", ()=>{
-            let rand = Math.floor(Math.random() * (500 - 100) + 1);
-            let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
-            noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+            let x = Math.floor(Math.random() * 300 + 1);
+            let y = Math.floor(Math.random() * -300 + 1);
+            noBtn.style.transform = "translate("+x+"px,"+y+"px)";
         });
         yesBtn.addEventListener("click", ()=>{
             ques.innerHTML = 'DM mo ako ;3'
